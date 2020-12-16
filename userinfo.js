@@ -7,6 +7,7 @@ module.exports = {
     description: "whois embed",
     execute(message, args) {
     var Member = message.mentions.members.first() || message.member;
+    var serverIcon = message.guild.iconURL();
     let whois = new MessageEmbed() // Creating 
         .setColor(15002111) // Color 
         .setTitle("Profile Information:") // Titling
@@ -19,7 +20,7 @@ module.exports = {
             size: 2048,
             format: 'png'
             })) // Restricting size of image.
-        .setFooter("Powered by [Server Name]", [Imagine URL]); // You will need to add the server name and image manually.
+        .setFooter(`Powered by ${message.guild.name}`, (serverIcon)); // You will need to add the server name and image manually.
     return message.channel.send(whois); // Send to the discord channel.
     }
 }
