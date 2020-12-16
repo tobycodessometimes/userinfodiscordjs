@@ -9,5 +9,6 @@ Information includes:
 - Account date of joining server
 
 Other commands will be added over time.
-
 You need a command handler with the relevant dependencies.
+
+USAGE - .userinfo (@ of user)
